@@ -1,0 +1,17 @@
+{
+  "name": "ynot",
+  "version": "0.1.0",
+  "description": "YnotOne reporting in Claude: the read-only reporting connector, a skill that knows which report answers which question and what its numbers mean, and commands for a question, a call-cadence review and a weekly summary.",
+  "author": {
+    "name": "Firm Concept"
+  },
+  "homepage": "https://ynotone.io",
+  "repository": "https://github.com/Firm-Concept/ynot-claude",
+  "keywords": [
+    "ynot",
+    "reporting",
+    "admissions",
+    "leads",
+    "call-center"
+  ]
+}

@@ -1,0 +1,27 @@
+name: Release
+
+# Tag vX.Y.Z (matching plugins/ynot/.claude-plugin/plugin.json) to publish the skill zip.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag matches the plugin version
+        run: |
+          want="v$(jq -r .version plugins/ynot/.claude-plugin/plugin.json)"
+          [ "$want" = "$GITHUB_REF_NAME" ] || { echo "tag $GITHUB_REF_NAME != plugin version $want"; exit 1; }
+      - name: Build the skill zip
+        run: ./scripts/package-skill.sh
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/ynot-reporting.zip \
+            --title "$GITHUB_REF_NAME" --notes "Skill for claude.ai: download ynot-reporting.zip and upload it in Customize → Skills. See the README for the connector."
