@@ -70,3 +70,9 @@ To offer it in a project, add to that project's `.claude/settings.json`:
   in it.
 - To release: bump `version` in `plugins/ynot/.claude-plugin/plugin.json`, then tag
   `vX.Y.Z`. The release workflow builds `ynot-reporting.zip` and attaches it to the release.
+
+## License
+
+The plugin and skill in this repository are released under the [MIT License](LICENSE).
+It covers these files only; YnotOne itself and the data the connector returns are not
+licensed by it and need a YnotOne account.

@@ -1,6 +1,6 @@
 {
   "name": "ynot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "YnotOne reporting in Claude: the read-only reporting connector, a skill that knows which report answers which question and what its numbers mean, and commands for a question, a call-cadence review and a weekly summary.",
   "author": {
     "name": "Firm Concept"
@@ -13,5 +13,6 @@
     "admissions",
     "leads",
     "call-center"
-  ]
+  ],
+  "license": "MIT"
 }
