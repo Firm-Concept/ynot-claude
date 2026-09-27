@@ -1,6 +1,6 @@
 ---
 description: Answer a reporting question from YnotOne data
-argument-hint: <question, e.g. "leads by source for the Fernhill campus last month">
+argument-hint: '<question, e.g. "leads by source for the Fernhill campus last month">'
 allowed-tools: mcp__plugin_ynot_reporting__list_reports, mcp__plugin_ynot_reporting__run_report, mcp__plugin_ynot_reporting__list_filter_values, mcp__plugin_ynot_reporting__resolve_filter_value
 ---
 

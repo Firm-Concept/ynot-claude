@@ -1,6 +1,6 @@
 ---
 description: One-page weekly summary — leads, speed to lead, call center and conversions
-argument-hint: [campus or program, optional] [week, default last 7 days]
+argument-hint: '[campus or program, optional] [week, default last 7 days]'
 allowed-tools: mcp__plugin_ynot_reporting__list_reports, mcp__plugin_ynot_reporting__run_report, mcp__plugin_ynot_reporting__list_filter_values, mcp__plugin_ynot_reporting__resolve_filter_value
 ---
 

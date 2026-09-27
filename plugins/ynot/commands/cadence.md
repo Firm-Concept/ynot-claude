@@ -1,6 +1,6 @@
 ---
 description: Review how well a call campaign's day-by-day cadence is being followed
-argument-hint: [campaign name] [period, e.g. "last 30 days"]
+argument-hint: '[campaign name] [period, e.g. "last 30 days"]'
 allowed-tools: mcp__plugin_ynot_reporting__list_reports, mcp__plugin_ynot_reporting__run_report, mcp__plugin_ynot_reporting__list_filter_values, mcp__plugin_ynot_reporting__resolve_filter_value
 ---
 
