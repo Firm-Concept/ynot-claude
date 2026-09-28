@@ -86,7 +86,7 @@ To offer it in a project, add to that project's `.claude/settings.json`:
 - Privacy policy: <https://ynotone.com/privacy-policy> · Terms: <https://ynotone.com/terms-of-service>
 - The connector reads reports only. It returns totals and breakdowns for your own agency —
   never individual lead records — and cannot change anything in YnotOne.
-- Support: <support@ynotlms.com>
+- Support: <https://ynotone.com/help> · <support@ynotlms.com>
 
 ## License
 
