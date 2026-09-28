@@ -1,7 +1,7 @@
 {
   "name": "ynot",
   "displayName": "YnotOne",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "YnotOne reporting in Claude: the read-only reporting connector, a skill that knows which report answers which question and what its numbers mean, and commands for a question, a call-cadence review and a weekly summary.",
   "author": {
     "name": "YnotOne",
@@ -10,6 +10,7 @@
   "homepage": "https://ynotone.com",
   "repository": "https://github.com/Firm-Concept/ynot-claude",
   "license": "MIT",
+  "privacyPolicyUrl": "https://ynotone.com/privacy-policy",
   "keywords": [
     "ynot",
     "reporting",
