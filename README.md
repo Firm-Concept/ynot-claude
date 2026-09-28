@@ -1,3 +1,5 @@
+<img src="assets/ynotone-logo.png" alt="YnotOne" width="96" align="right">
+
 # YnotOne for Claude
 
 Ask Claude about your admissions data in YnotOne — leads, sources, campuses, reps, calls,
@@ -14,26 +16,32 @@ Nothing in this repository can change your data.
 |---|---|
 | **Connector** | The YnotOne reporting connector, `https://mcp.ynotlms.com`. It is what fetches the numbers. |
 | **Skill** (`ynot-reporting`) | Teaches Claude which report answers which question, which filters each report needs, what the numbers mean, and how to state them without guessing. |
-| **Commands** (Claude Code) | `/ynot:report <question>` · `/ynot:cadence [campaign] [period]` · `/ynot:weekly [campus] [week]` |
+| **Commands** | `report <question>` · `cadence [campaign] [period]` · `weekly [campus] [week]` — type `/` in Claude (`/ynot:report` etc. in Claude Code) |
 
 You need a YnotOne account. Without one the connector has nothing to show.
 
-## Claude (claude.ai and the desktop app)
+## Claude (claude.ai, the desktop app and Cowork)
 
-1. **Add the connector.** Settings → Connectors → *Add custom connector*:
-   - URL: `https://mcp.ynotlms.com`
-   - OAuth client ID: `claude` (leave the secret empty)
+Plugins work on every paid Claude plan.
 
-   Click **Connect** and sign in with your YnotOne account.
-2. **Add the skill.** Download `ynot-reporting.zip` from the
-   [latest release](https://github.com/Firm-Concept/ynot-claude/releases/latest), then
-   Customize → Skills → *Upload* and choose the zip. Turn it on.
-3. Ask away: *"How many leads did we get last month, by source?"* · *"Is our speed-to-lead
-   cadence being followed?"* · *"Which campus has the slowest first call this week?"*
+1. **Install the plugin.** Customize → Plugins → *Add marketplace* → enter
+   `Firm-Concept/ynot-claude` → install **YnotOne**.
+2. **Connect.** Open the plugin's *Connectors* tab, click **reporting** → **Connect**, and
+   sign in with your YnotOne account. You stay signed in after that.
+3. **Ask.** In any chat: *"How many leads did we get last month, by source?"* ·
+   *"Is our speed-to-lead cadence being followed?"* · *"Which campus has the slowest first
+   call this week?"* — or type `/` for the `report`, `cadence` and `weekly` commands.
 
-**For an organization** (Team or Enterprise plan): an owner adds the connector for the
-organization and uploads the skill once, then publishes it to the organization. Each member
-connects with their own YnotOne sign-in, so everyone still sees only their own data.
+**For an organization** (Team or Enterprise): an owner can add the plugin under
+Organization settings → Plugins & skills and make it available, installed by default or
+required for everyone. Organization marketplaces sync only from private repositories, so
+upload the plugin instead: `ynotone-plugin.zip` from the
+[latest release](https://github.com/Firm-Concept/ynot-claude/releases/latest). Each member
+still connects with their own YnotOne sign-in and sees only their own data.
+
+**Without the plugin:** add the connector alone (Settings → Connectors → *Add custom
+connector*, URL `https://mcp.ynotlms.com`, OAuth client ID `claude`, no secret), and upload
+`ynot-reporting.zip` from the latest release under Customize → Skills.
 
 ## Claude Code
 
@@ -58,7 +66,8 @@ To offer it in a project, add to that project's `.claude/settings.json`:
 ## Updating
 
 - **Claude Code:** `/plugin update ynot@ynot`.
-- **claude.ai:** download the new zip from the latest release and upload it again.
+- **claude.ai:** plugins from the marketplace update themselves; an uploaded zip is
+  replaced by uploading the new one from the latest release.
 
 ## Maintainers
 
@@ -69,7 +78,15 @@ To offer it in a project, add to that project's `.claude/settings.json`:
   the skill runs in every agency's Claude: never put a real agency, campus or person name
   in it.
 - To release: bump `version` in `plugins/ynot/.claude-plugin/plugin.json`, then tag
-  `vX.Y.Z`. The release workflow builds `ynot-reporting.zip` and attaches it to the release.
+  `vX.Y.Z`. The release workflow attaches `ynotone-plugin.zip` (the plugin, for upload) and
+  `ynot-reporting.zip` (the skill alone) to the release.
+
+## Privacy and support
+
+- Privacy policy: <https://ynotone.com/privacy-policy> · Terms: <https://ynotone.com/terms-of-service>
+- The connector reads reports only. It returns totals and breakdowns for your own agency —
+  never individual lead records — and cannot change anything in YnotOne.
+- Support: <support@ynotlms.com>
 
 ## License
 

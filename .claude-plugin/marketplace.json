@@ -1,7 +1,8 @@
 {
   "name": "ynot",
   "owner": {
-    "name": "Firm Concept"
+    "name": "YnotOne",
+    "url": "https://ynotone.com"
   },
   "metadata": {
     "description": "Claude plugins for YnotOne."
@@ -10,7 +11,8 @@
     {
       "name": "ynot",
       "source": "./plugins/ynot",
-      "description": "Ask YnotOne reporting questions in Claude: the read-only reporting connector, a skill that knows every report and its metrics, and review commands."
+      "description": "Ask YnotOne reporting questions in Claude: the read-only reporting connector, a skill that knows every report and its metrics, and review commands.",
+      "displayName": "YnotOne"
     }
   ]
 }
