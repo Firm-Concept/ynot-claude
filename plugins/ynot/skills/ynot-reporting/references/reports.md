@@ -52,9 +52,14 @@ reported separately and does not enter the change rate.
 
 ### `reports_calldispositions` — Call Dispositions Report
 **Answers:** inbound and outbound call counts by call outcome (disposition).
-**Required:** `client` (one) — not listable through the connector; send the user to
-ynotone.io.
-**Breakdowns:** `location` (default), `channel`, `source`, `agent`.
+**Required:** `client` (one) — `list_filter_values` with `dim: client`; applied
+automatically when the agency has one.
+**Breakdowns:** `location` (default), `channel`, `source`, `agent`, `adrep`.
+`agent` is whoever placed the call; `adrep` is the lead's admissions rep at the time
+of the call. Each row carries one count per disposition.
+**Example:** "warm transfers by admissions rep, received or assigned, yesterday and
+today" → `breakdown: adrep`, `date_range` covering both days, and read each rep's
+Warm Transfer count (with its campus, run again with `breakdown: location`).
 
 ### `reports_ccreport` — Call Center Success Report
 **Answers:** call-center outcomes — gross, contact, success, warm-transfer and
@@ -133,5 +138,5 @@ program or campus.
 
 ### `reports_pacing` — Pacing Report
 **Answers:** lead pacing against allocation by source and campus.
-**Required:** `client` (one) — not listable through the connector; send the user to
-ynotone.io.
+**Required:** `client` (one) — `list_filter_values` with `dim: client`; applied
+automatically when the agency has one.
