@@ -27,8 +27,10 @@ aggregates only — never individual leads.
 2. **Resolve every name to an id.** Filters take ids, never names. Use
    `resolve_filter_value`; if it returns several matches, ask which one. A name that
    matches nothing is not a filter — do not guess an id.
-3. **Supply required filters.** The connector does not enforce them: a report run without
-   one returns empty totals, not an error. See the table below.
+3. **Supply required filters.** `list_reports` names them as `required_filters`, one id
+   each. Leave one out and `run_report` applies it when the agency has only one value
+   (the output's `scope` names it), or refuses and lists the choices — ask the user which
+   one rather than picking. See the table below.
 4. **Choose the date range** (grammar below). Say the period you used in the answer.
 5. **Choose a breakdown** only from the keys `list_reports` gave for that report. Without
    one you get the agency-level totals.
@@ -40,7 +42,7 @@ aggregates only — never individual leads.
 |---|---|---|
 | `reports_callcadence` | `cadence_campaign` (one) | `list_filter_values` with `dim: cadence_campaign` |
 | `reports_buildup` | `start_date` cohort (one) | Not listable through the connector: omit it and the report uses the start cohort closest to today. For another cohort, send the user to the Build-Up report on ynotone.io. |
-| `reports_calldispositions`, `reports_pacing` | `client` (one) | Not listable through the connector. Tell the user to open the report on ynotone.io. |
+| `reports_calldispositions`, `reports_pacing` | `client` (one) | `list_filter_values` with `dim: client`, or `resolve_filter_value` on the name the user gave. Applied for you when the agency has one client. |
 
 ### Date ranges
 
