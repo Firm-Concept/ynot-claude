@@ -55,8 +55,10 @@ reported separately and does not enter the change rate.
 **Required:** `client` (one) — `list_filter_values` with `dim: client`; applied
 automatically when the agency has one.
 **Breakdowns:** `location` (default), `channel`, `source`, `agent`, `adrep`.
-`agent` is whoever placed the call; `adrep` is the lead's admissions rep at the time
-of the call. Each row carries one count per disposition.
+`agent` is whoever placed the call; `adrep` is the lead's assigned admissions rep (the
+LMS "Admissions Rep. Assigned"). Each row carries one count per disposition. The `user`
+filter matches the caller, not the rep — for one rep's transfers, use `breakdown: adrep`
+and read that rep's row.
 **Example:** "warm transfers by admissions rep, received or assigned, yesterday and
 today" → `breakdown: adrep`, `date_range` covering both days, and read each rep's
 Warm Transfer count (with its campus, run again with `breakdown: location`).
