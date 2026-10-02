@@ -63,6 +63,14 @@ and read that rep's row.
 today" → `breakdown: adrep`, `date_range` covering both days, and read each rep's
 Warm Transfer count (with its campus, run again with `breakdown: location`).
 
+### `reports_callsummary` — Call Summary
+**Answers:** dialer activity by campus and rep — calls, contacts, contact %, warm
+transfers, appointments set and convert % (transfers + appointments over contacts).
+Counts calls, not leads; for lead outcomes use `reports_ccreport`.
+**Breakdowns:** `location` (default), drilling into reps.
+**Filters:** common + `call_campaign`. Leads show "—" when filtered by rep or campaign,
+and on rep rows: leads aren't attributed to reps here.
+
 ### `reports_ccreport` — Call Center Success Report
 **Answers:** call-center outcomes — gross, contact, success, warm-transfer and
 appointment-set rates.
