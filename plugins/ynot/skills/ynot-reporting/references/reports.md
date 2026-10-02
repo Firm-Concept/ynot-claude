@@ -64,15 +64,15 @@ today" → `breakdown: adrep`, `date_range` covering both days, and read each re
 Warm Transfer count (with its campus, run again with `breakdown: location`).
 
 ### `reports_callsummary` — Call Summary
-**Answers:** the LMS Call Summary, number for number — dialer calls, contacts, contact %,
-warm transfers, appointments set and convert % by campus, with agents under each campus.
+**Answers:** dialer calls, contacts, contact %, warm transfers, appointments set and
+convert % ((appointments + transfers) / contacts) by campus, with agents under each campus.
+Same numbers as the LMS Call Summary.
 **Breakdowns:** `location` (default, drilling into agents), `agent`.
 **Filters:** common + `call_campaign`.
-**Read:** it keeps the LMS definitions. Outcomes use fixed outcome ids that belong to two
-schools, so other schools show 0 contacts, transfers and appointments — use
-`reports_calldispositions` for their outcomes. Leads counts status changes per assigned
-rep, not unique leads (use `reports_leads` for lead counts), and shows "—" with a
-campaign filter. Convert % is a ratio, as in the LMS.
+**Read:** outcomes match by title; a contact is any outcome except ones meaning nobody
+was reached. Leads are unique leads created in the period; under an agent, the leads
+they currently own ("No current rep" holds the rest). Leads show "—" with a campaign
+filter.
 
 ### `reports_ccreport` — Call Center Success Report
 **Answers:** call-center outcomes — gross, contact, success, warm-transfer and
