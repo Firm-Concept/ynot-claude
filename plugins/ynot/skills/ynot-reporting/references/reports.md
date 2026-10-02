@@ -67,7 +67,9 @@ Warm Transfer count (with its campus, run again with `breakdown: location`).
 **Answers:** dialer activity by campus and rep — calls, contacts, contact %, warm
 transfers, appointments set and convert % (transfers + appointments over contacts).
 Counts calls, not leads; for lead outcomes use `reports_ccreport`.
-**Breakdowns:** `location` (default), drilling into reps.
+**Breakdowns:** `location` (default, drilling into reps), `agent` (who placed the call).
+A contact is any outcome except ones meaning nobody was reached (attempted to contact,
+no answer, voicemail, busy, disconnected/non-working number).
 **Filters:** common + `call_campaign`. Leads show "—" when filtered by rep or campaign,
 and on rep rows: leads aren't attributed to reps here.
 
