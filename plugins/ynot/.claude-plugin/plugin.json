@@ -1,7 +1,7 @@
 {
   "name": "ynot",
   "displayName": "YnotOne",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "YnotOne reporting in Claude: the read-only reporting connector, a skill that knows which report answers which question and what its numbers mean, and commands for a question, a call-cadence review and a weekly summary.",
   "author": {
     "name": "YnotOne",
