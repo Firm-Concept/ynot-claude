@@ -37,11 +37,20 @@ the dialer was supposed to make:
 | Calls Needed | Goal × Leads Due. |
 | Calls Made | The dialer's calls to those leads that day. |
 | Met Goal / Missed Goal | Leads that got every planned call / fewer (some or none). |
+| Call Completion | Calls made ÷ calls needed, each lead-day counted up to its goal. |
 | % Met Goal | Met Goal ÷ Leads Due. |
+
+The `created` breakdown has one row per arrival date — Leads, Calls Needed, Calls Made,
+Call Completion, Avg Calls per Lead, Full Cadence and % Met Goal — the cut an admissions
+team's own audit uses ("Monday's leads got 61% of their calls").
+
+Leads are scored **through the end of the range**: for Sep 14–19, a lead that arrived on
+the 18th is owed its days 1–2 only. A range that ends today scores through yesterday.
 
 Headline figures: **Cadence Followed** (% of all due lead-days that met their goal — the
 campaign's overall adherence), **Day 1 Goal Met**, **Median First Call** (arrival to first
-call), **Reached**, **Appointments** (within 30 days of arrival), **Calls Made**, and
+call), **Call Completion** (planned calls made), **Full Cadence** (leads that got every
+planned call on every scheduled day), **Reached**, **Appointments** (within 30 days of arrival), **Calls Made**, and
 **Over 3 Contacts in 24h** (leads that got more than three calls plus texts inside any
 24 hours — the Florida telemarketing limit; worth flagging where it applies).
 
