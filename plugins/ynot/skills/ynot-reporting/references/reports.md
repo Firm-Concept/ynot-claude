@@ -28,7 +28,7 @@ its totals. For per-day numbers use the Leads Report over a custom range instead
 ### `reports_callcadence` — Call Cadence Report
 **Answers:** did each lead get the calls its campaign's day-by-day schedule plans?
 **Required:** `cadence_campaign` (one; `list_filter_values`).
-**Breakdowns:** `day` (default), `block` (week), `location` (campus), `rep`.
+**Breakdowns:** `day` (default), `block` (week), `created` (lead arrival date), `location` (campus), `rep`.
 **Filters:** `location`, `enrollment_status`, `program`, `channel`, `lead_source`.
 **Read:** see [call-cadence.md](call-cadence.md).
 
