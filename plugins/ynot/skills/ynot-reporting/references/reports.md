@@ -18,6 +18,8 @@ source, status or rep.
 **Filters:** common + `enrollment_status`.
 **Read:** "Total" is every lead received; "Valid" excludes duplicates and invalid leads.
 Use it for "how many leads", "which sources", "which campus is up".
+**Option:** `original_lead_date=true` counts leads by when they first came in instead of their
+latest inquiry (re-inquired leads fall in the month they originally arrived).
 
 ### `reports_leadflow` — Lead Flow
 **Answers:** daily valid-lead volume across one month.
